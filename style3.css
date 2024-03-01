@@ -1,0 +1,169 @@
+.container3{
+	font-size: calc(1rem + .1vw);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 40px 0;
+}
+
+.container3 .box3{
+	position: relative;
+	width: 320px;
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 40px 30px;
+	transition: 0.5s;
+}
+.container3 .box3::before{
+	display: flex;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 5px;
+	width: 50%;
+	height: 100%;
+	border-radius: 5px;
+	transform: skewX(15deg);
+	transition: 0.5s;
+	filter: blur(80px);
+	transition: 0.5s;
+}
+.container3 .box3::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 5px;
+	width: 50%;
+	height: 100%;
+	border-radius: 5px;
+	transform: skewX(15deg);
+	filter: blur(0);
+	transition: 0.5s;
+}
+.container3 .box3:hover:before,
+.container3 .box3:hover:after{
+	content: '';
+	transition: 0.5s;
+	/*filter: blur(5px);*/
+	transform: skewX(359deg);
+	width: calc(50% + 30%);
+	
+}
+
+.container3 .box3::before,
+.container3 .box3::after{
+	background: linear-gradient(45deg,#ff0058,#ffbc00)!Important;
+	transform: skewX(345deg);
+}
+
+
+.container3 .box3 span{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+	pointer-events: none;
+}
+.container3 .box3 span::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 60%;
+	height: 100%;
+	border-radius: 8px;
+	background: rgba(255,255,255,0.1);
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	transition: 0.5s;
+	animation: animate 2s ease-in-out infinite;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.container3 .box3:hover span::before{
+	top: -50px;
+	right: 0;
+	left: 180px;
+	width: 100px;
+	height: 100px;
+	opacity: 1;
+}
+.container3 .box3 span::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 60%;
+	height: 100%;
+	border-radius: 8px;
+	background: rgba(255,255,255,0.1);
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	transition: 0.5s;
+	animation: animate 2s ease-in-out infinite;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	animation-delay: -1s;
+}
+
+
+.container3 .box3:hover span::after{
+	bottom: -50px;
+	right: 230px;
+	width: 100px;
+	height: 100px;
+	opacity: 1;
+}
+
+@keyframes animate{
+	0%,100%
+	{
+		transform: translateY(10px);
+	}
+	50%
+	{
+		transform: translateY(-10px);
+	}
+}
+
+.container3 .box3 .content3{
+	position: relative;
+	left: -32px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left:100px;
+	padding-right: 100px;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 0.7rem;
+	backdrop-filter: blur(8px);
+	transition: 0.5s;
+	color: #f7eeec;
+	z-index: 1;
+	text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.container3 .box3:hover .content3{
+	transition: 0.5s;
+	left: -25px;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.container3 .box3 .content3 a{
+	display: inline-block;
+	font-size: 1em;
+	color: #111;
+	background: #f7eeec;
+	padding: 10px;
+	border-radius: 4px;
+	opacity: 0.9;
+	text-decoration: none;
+	font-weight: 600;
+}

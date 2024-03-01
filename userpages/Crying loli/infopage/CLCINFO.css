@@ -1,0 +1,125 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #edf1f4;
+	min-height: 100vh;
+
+}
+.loader{
+	display: flex;
+	flex-direction: row;
+}
+.loader div{
+	position: relative;
+	width: 40px;
+	height: 200px;
+	margin: 20px;
+	overflow: hidden;
+	border-radius: 40px;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05, #edf1f4));
+	box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1),
+				-15px -15px 20px #fff,
+				inset -5px -5px 5px rgba(255,255,255,0.5),
+				inset 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+.loader div::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	border-radius: 40px;
+	box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1),
+				-15px -15px 20px #fff,
+				inset -5px -5px 5px rgba(255,255,255,0.5),
+				inset 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+.loader div::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.2),
+				0 420px 0 400px #2196f3;
+	animation: animate 2s ease-in-out infinite;
+	transform: translateY(160px);
+	animation-delay: calc(-0.5s * var(--i));
+}
+
+@keyframes animate
+{
+	0%{
+		transform: translateY(160px);
+		filter: hue-rotate(180deg);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	100%{
+		transform: translateY(160px);
+		filter: hue-rotate(0deg);
+	}
+}
+/*body{
+	display: block;
+	background-color: #0e1538;
+	position: relative;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+.HeaderBox{
+	display: block;
+	max-height: 100%;
+	max-width: 100%;
+	background-color: #121212;
+	border-bottom: 4px solid #855590b3;
+	
+}
+.FuterBox{
+	display: block;
+	max-height: 100%;
+	max-width: 100%;
+	background-color: #121212;
+	padding-top:0.1%;
+	padding-bottom:25px;
+	margin-top:10%; 
+	border-top: 4px solid #855590b3;
+	
+}
+.HeadLogo{
+	display: block;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0;
+	margin-left: -20px;
+	color: #f7eeec;
+}
+::-webkit-scrollbar{
+	width: 0px;
+	height: 0px;
+}
+.date{
+	font-size: 42px;
+    text-transform: uppercase;
+    color: #f7bad4;
+    text-align: center;
+    margin: 5px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    text-shadow: 1px 1px 4px rgba(150, 150, 150, 1);
+    border-radius: .5rem;
+}

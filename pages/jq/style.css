@@ -1,0 +1,39 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	width: 570px;
+}
+#panel,#M-panel,#C-panel {
+      background: gray;
+      height: 200px;
+      text-align: center;
+	padding: 10px 10px 0 0;
+      margin: auto;
+      display: flex;
+      border-radius: 10px;
+    }
+
+.slide,.M-slide,.C-slide {
+	margin: 0;
+	padding: 0;
+}
+.active {
+	background-position: right 12px;
+}
+.btn-slide,.M-btn-slide,.C-btn-slide{
+      text-align: center;
+      width: 144px;
+      height: 31px;
+      padding: 10px 10px 0 0;
+      margin: 0 auto;
+      display: block;
+      color: red;
+      text-decoration: none;
+}
+#box {
+      background: #FFFFE0;
+      height: auto;
+      width: auto;
+      position: relative;
+      border-radius: 5px;
+      padding: 5px 0 0 3px;
+    }

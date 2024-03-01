@@ -1,0 +1,110 @@
+.AC-container{
+	font-size: calc(1rem + .1vw);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 40px 0;
+}
+
+.AC-container .AC-box{
+	position: relative;
+	width: 400px;
+	height: 320px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 60px 30px;
+	transition: 0.5s;
+}
+.AC-container .AC-box::before{
+	display: flex;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+	transition: 0.5s;
+	filter: blur(40px);
+}
+.AC-container .AC-box::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 5px;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	filter: blur(0);
+	transition: 0.5s;
+}
+.AC-container .AC-box:hover:before,
+.AC-container .AC-box:hover:after{
+	content: '';
+	transition: 0.5s;
+	/*filter: blur(5px);*/
+	transform: translateY(-20px);
+	
+}
+
+.AC-container .AC-box::before,
+.AC-container .AC-box::after{
+	background: linear-gradient(135deg,#121212,#778899c2);
+}
+
+
+.AC-container .AC-box span{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+	pointer-events: none;
+}
+
+
+.AC-container .AC-box .AC-content{
+	position: relative;
+	left: -32px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left:20px;
+	padding-right: 100px;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 0.7rem;
+	backdrop-filter: blur(8px);
+	transition: 0.5s;
+	color: #f7eeec;
+	z-index: 1;
+	text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.AC-container .AC-box:hover .AC-content{
+	transition: 0.5s;
+	transform: translateY(-10px);
+}
+
+.AC-container .AC-box .AC-content a{
+	display: inline-block;
+	font-size: 1em;
+	color: #111;
+	background: #f7eeec;
+	padding: 10px;
+	border-radius: 4px;
+	opacity: 0.9;
+	text-decoration: none;
+	font-weight: 600;
+}
+.Aava{
+	width: 64px;
+	height: 64px;
+	border-radius: 50px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.AC-container .AC-box .AC-content h2{
+	font-size: 1.2em;
+}
