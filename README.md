@@ -1,6 +1,7 @@
-# NeetCode
- 
-Just HTML and CSS. 
+# О работе
+
+Сайт визитка для практики.
+
+Только `HTML` и `CSS`.
 
 Created in 2020.
-Last modified in 2021.
